@@ -43,12 +43,10 @@ a{
     width: calc((100% / 3) - 10px);
     padding: 20px;
     margin: 0 5px;
+    position: relative;
 }
 
 /* Valori per far "adattare" il contenuto all'interno della card */
-.img_card{
-    position: relative;
-}
 .img_card img{
     width: 100%;
 }
@@ -56,7 +54,7 @@ a{
 /* Label rosso con lo sconto e quella verde con la sostenibilita' */
 .label{
     position: absolute;
-    bottom: 10%;
+    bottom: 15%;
     width: 50px;
     color: white;
     text-align: center;
@@ -64,8 +62,8 @@ a{
 }
 .label_text{
     position: absolute;
-    bottom: 10%;
-    left: 180px;
+    bottom: 15%;
+    left: 13%;
     width: 100px;
     color: white;
     background-color: #008000;
@@ -73,6 +71,9 @@ a{
 }
 
 /* Cuoricino in alto a destra con l'hover del mouse rosso */
+.img_card{
+    position: relative;
+}
 .img_card .fa-heart{
     position: absolute;
     right: 0;
@@ -82,4 +83,32 @@ a{
 }
 .fa-heart:hover{
     color: red;
+}
+
+/* Prezzi colorati di rosso con il resto del testo sotto modificato */
+.prices{
+    color: #ff0d3b;
+    font-weight: bold;
+    display: inline-block;
+}
+.brand{
+    font-size: 14px;
+}
+
+/* Footer di pagina con la scritta aziendale con le rispettive informazioni legali/privacy ed i social */
+.contenitore_footer{
+    height: 100px;
+    width: 100%;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+i{
+    padding: 3px;
+    padding-top: 5px;
+}
+h3{
+    padding-bottom: 5px;
 }
