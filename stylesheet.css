@@ -21,7 +21,7 @@ body{
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 500;
+    z-index: 100;
 }
 a{
     text-decoration: none;
@@ -49,6 +49,8 @@ a{
 /* Valori per far "adattare" il contenuto all'interno della card */
 .img_card img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Label rosso con lo sconto e quella verde con la sostenibilita' */
@@ -59,6 +61,7 @@ a{
     color: white;
     text-align: center;
     background-color: #ff0000;
+    z-index: 1;
 }
 .label_text{
     position: absolute;
@@ -68,6 +71,7 @@ a{
     color: white;
     background-color: #008000;
     text-align: center;
+    z-index: 1;
 }
 
 /* Cuoricino in alto a destra con l'hover del mouse rosso */
@@ -80,10 +84,11 @@ a{
     top: 10px;
     background-color: white;
     padding:  15px;
+    z-index: 2;
 }
-.fa-heart:hover{
+/* .fa-heart:hover{
     color: red;
-}
+} */
 
 /* Prezzi colorati di rosso con il resto del testo sotto modificato */
 .prices{
@@ -93,6 +98,22 @@ a{
 }
 .brand{
     font-size: 14px;
+}
+
+/* Overlay 2nd img */
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+.img_card:hover .overlay{
+    opacity: 1;
 }
 
 /* Footer di pagina con la scritta aziendale con le rispettive informazioni legali/privacy ed i social */
